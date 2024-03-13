@@ -2,11 +2,9 @@ import javax.swing.*;
 import java.util.List;
 
 public class ViewCropInformationWorker extends SwingWorker<List<Crop>, Void> {
-    private JFrame frame;
     private Farm farm;
 
-    public ViewCropInformationWorker(JFrame frame, Farm farm) {
-        this.frame = frame;
+    public ViewCropInformationWorker(Farm farm) {
         this.farm = farm;
     }
 
@@ -34,4 +32,3 @@ public class ViewCropInformationWorker extends SwingWorker<List<Crop>, Void> {
         }
     }
 }
-

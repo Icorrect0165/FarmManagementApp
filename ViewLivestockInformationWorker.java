@@ -2,11 +2,9 @@ import javax.swing.*;
 import java.util.List;
 
 public class ViewLivestockInformationWorker extends SwingWorker<List<Livestock>, Void> {
-    private JFrame frame;
     private Farm farm;
 
     public ViewLivestockInformationWorker(JFrame frame, Farm farm) {
-        this.frame = frame;
         this.farm = farm;
     }
 

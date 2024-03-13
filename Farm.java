@@ -1,8 +1,19 @@
 import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JOptionPane;
 
 public class Farm {
     private ArrayList<Crop> crops = new ArrayList<>();
     private ArrayList<Livestock> livestock = new ArrayList<>();
+
+    public synchronized List<Crop> getCrops() {
+        return new ArrayList<>(crops); // Return a copy to avoid direct modification
+    }
+
+    public synchronized List<Livestock> getLivestock() {
+        return new ArrayList<>(livestock); // Return a copy to avoid direct modification
+    }
 
     public synchronized void viewCropInformation() {
         if (crops.isEmpty()) {
